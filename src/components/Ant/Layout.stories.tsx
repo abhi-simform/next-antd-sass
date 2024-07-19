@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { MenuProps, Menu, Layout } from 'antd'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
+import Image from 'next/image'
 
 const items2: MenuProps['items'] = [<>1. </>, <>2. </>, <>3. </>].map((icon, index) => {
   const key = String(index + 1)
@@ -52,7 +53,7 @@ export const LayoutDemo: Story = {
       </Sider>
       <Layout>
         <Header style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <img src="/images/logo.svg" alt="simform logo" width={122} height={22} />
+          <Image src="/images/logo.svg" alt="simform logo" width={122} height={22} />
           <ThemeSwitcher />
         </Header>
         <Content>{args.children}</Content>
